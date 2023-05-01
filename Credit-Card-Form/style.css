@@ -1,0 +1,124 @@
+.credit-card {
+  margin: 200px;
+  position: relative;
+}
+.credit-card label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+.credit-card input,
+.credit-card select {
+  font-family: monospace;
+  padding: 0.25em 0.5em;
+  border: none;
+  border-radius: 0.25em;
+  appearance: none;
+}
+option{
+    font-family: monospace;
+}
+.credit-card .back,
+.credit-card .front {
+  background-color: hsl(200, 80%, 30%);
+  border: 1px solid hsl(200, 80%, 10%);
+  width: 350px;
+  height: 190px;
+  color: white;
+  padding: 0.6rem 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 0.8rem;
+}
+.credit-card .front {
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+.credit-card .back {
+  position: absolute;
+  top: 2rem;
+  left: 4.45rem;
+}
+.credit-card .back .strip {
+  height: 40px;
+  background-color: black;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  right: 0;
+}
+.credit-card .cvc {
+    position: absolute;
+    bottom: 2.5rem;
+    right: .4rem;
+}
+.credit-card .cvc input {
+    width: 3ch;
+    font-family: monospace;
+  }
+.credit-card .front::before {
+  content: "";
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border-radius: 100%;
+  background-color: hsl(0, 0%, 100%, 0.15);
+  top: -250px;
+  left: -150px;
+  z-index: -1;
+}
+.credit-card .front::after {
+  content: "";
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  border-radius: 100%;
+  background-color: hsl(0, 0%, 100%, 0.075);
+  bottom: -475px;
+  left: -150px;
+  z-index: -1;
+}
+.credit-card-row span {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.form-group {
+  display: flex;
+  border: none;
+  flex-direction: column;
+  margin-top: 45px;
+  padding: 0;
+  gap: 0.5rem;
+  margin-bottom: 15px;
+}
+.form-group legend {
+  display: none;
+}
+.input-row {
+  display: flex;
+}
+.cardHolderName {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+}
+.cardHolderName input {
+  width: 200px;
+}
+.cardExpireDate {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.cardExpireDate select {
+  padding: 0.25em 1rem;
+}
+.cardExpireDate .month-year,
+.credit-card .cardNumberGroup {
+  display: flex;
+  gap: 0.7rem;
+}
+.credit-card .cardNumberGroup input {
+  width: 4ch;
+  font-family: monospace;
+}
